@@ -1,0 +1,31 @@
+include:
+  - project: 'tauOS/ci'
+    file: '/.rpm-build-template.yml'
+  - project: 'tauOS/ci'
+    file: '/.rpm-sign-template.yml'
+  - project: 'tauOS/ci'
+    file: '/.update-repo-template.yml'
+
+variables:
+    PACKAGE_VERSION: "1"
+    PACKAGE_NAME: "snapd-compat"
+    PACKAGE_ARCH: "noarch"
+
+stages:
+  - build
+  - sign
+  - upload
+
+build-job:
+  stage: build
+  extends: .build
+
+sign-job:
+  stage: sign
+  extends: .sign
+
+upload-job:
+  stage: upload
+  extends: .upload
+
+
