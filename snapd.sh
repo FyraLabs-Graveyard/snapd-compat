@@ -11,12 +11,12 @@ passwdhome(){
 checksymlink(){
 	if ! [[ $(readlink "/snap") == "/var/lib/snapd/snap" ]]
 	then
-		ln -sf '/var/lib/snapd/snap/' '/snap/' | systemd-cat -t snapd-ostree.service -p info
+		ln -sf '/var/lib/snapd/snap/' '/' | systemd-cat -t snapd-ostree.service -p info
 		checksymlink
 	fi
 }
 
 chattr -i /
 checksymlink
-passedhome
+passwdhome
 chattr +i /
