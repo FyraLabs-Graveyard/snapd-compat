@@ -1,0 +1,12 @@
+[Unit]
+Description=Prepare mount points
+Before=remote-fs-pre.target
+Wants=remote-fs-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=bash /opt/snapd-compat/snapd.sh
+ExecStopPost=chattr +i /
+
+[Install]
+WantedBy=remote-fs.target
