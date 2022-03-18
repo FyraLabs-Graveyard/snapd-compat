@@ -4,7 +4,7 @@ Version:        1
 Release:        1%{?dist}
 License:        IOL
 URL:            https://tauos.co
-Source0:	%{name}-%{version}.tar.gz
+Source0:	    %{name}-%{version}.tar.gz
 BuildArch:      noarch
 Provides:       snapd-compat(%{version}) = %{release}
 
