@@ -1,6 +1,6 @@
 Summary:        Snapd Compatibility
 Name:           snapd-compat
-Version:        1
+Version:        1.1
 Release:        1%{?dist}
 License:        IOL
 URL:            https://tauos.co
